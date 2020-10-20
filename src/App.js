@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import TweetFeed from "./components/TweetFeed";
-import RuleList from "./components/RuleList";
 
 class App extends React.Component {
   render() {
@@ -13,7 +11,7 @@ class App extends React.Component {
 
         <h1 className="ui header">
           <div className="content">
-            Real Time Tweet Streamer
+            Tweet Fact Checker
             <div className="sub header">Powered by Twitter data</div>
           </div>
         </h1>
@@ -21,8 +19,6 @@ class App extends React.Component {
         <div className="ui container">
           <BrowserRouter>
             <NavBar />
-            <Route exact path="/tweets" component={TweetFeed} />
-            <Route exact path="/rules" component={RuleList} />
           </BrowserRouter>
         </div>
       </div>

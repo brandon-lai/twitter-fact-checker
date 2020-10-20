@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <div className="ui two item menu">
             <NavLink to="/tweets" className="item" target="_blank">
-                New Tweets
+                Tweets
             </NavLink>
             <NavLink to="/rules" className="item" target="_blank">
                 Manage Rules
