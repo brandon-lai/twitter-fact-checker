@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import TweetFeed from "./components/TweetFeed";
+import RuleList from "./components/RuleList";
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
           <BrowserRouter>
             <NavBar />
             <Route exact path="/tweets" component={TweetFeed} />
+            <Route exact path="/rules" component={RuleList} />
           </BrowserRouter>
         </div>
       </div>

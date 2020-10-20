@@ -25,7 +25,7 @@ const streamURL = new URL("https://api.twitter.com/2/tweets/search/stream?tweet.
 
 const rulesURL = new URL(
     "https://api.twitter.com/2/tweets/search/stream/rules"
-  );
+);
 
 const errorMessage = {
     title: "Please Wait",
