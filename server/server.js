@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const server = http.createServer(app);
 const io = socketIo(server);
 
-const BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN;
+const BEARER_TOKEN = process.env.BEARER_TOKEN;
 
 let timeout = 0;
 
