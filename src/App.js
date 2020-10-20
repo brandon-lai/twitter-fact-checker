@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavBar from "./components/NavBar";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="ui container">
+        <div className="introduction"></div>
+
+        <h1 className="ui header">
+          <div className="content">
+            Real Time Tweet Streamer
+            <div className="sub header">Powered by Twitter data</div>
+          </div>
+        </h1>
+
+        <div className="ui container">
+          <BrowserRouter>
+            <NavBar />
+          </BrowserRouter>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
