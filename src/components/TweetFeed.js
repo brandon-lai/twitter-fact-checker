@@ -160,4 +160,4 @@ const TweetFeed = () => {
     );
 };
 
-export default TweetFeed
+export default TweetFeed;

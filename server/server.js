@@ -23,6 +23,10 @@ let timeout = 0;
 
 const streamURL = new URL("https://api.twitter.com/2/tweets/search/stream?tweet.fields=context_annotations&expansions=author_id");
 
+// const streamURL = new URL(  
+//     "https://api.twitter.com/2/users/by?usernames=twitterdev,twitterapi,adsapi&user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=author_id,created_at"
+// );
+
 const rulesURL = new URL(
     "https://api.twitter.com/2/tweets/search/stream/rules"
 );
@@ -111,7 +115,7 @@ const streamTweets = (socket, token) => {
         auth: {
             bearer: token,
         },
-        timeout: 31000,
+        timeout: 3000,
     }
 
     try {
