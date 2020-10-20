@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import TweetFeed from "./components/TweetFeed";
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
         <div className="ui container">
           <BrowserRouter>
             <NavBar />
+            <Route exact path="/tweets" component={TweetFeed} />
           </BrowserRouter>
         </div>
       </div>
