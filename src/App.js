@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import Tweets from "./components/Tweets";
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
         <div className="ui container">
           <BrowserRouter>
             <NavBar />
+            <Tweets />
           </BrowserRouter>
         </div>
       </div>
