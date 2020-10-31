@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import Tweets from "./components/Tweets";
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {username: "realDonaldTrump"};
