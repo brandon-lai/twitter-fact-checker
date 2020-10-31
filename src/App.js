@@ -44,7 +44,7 @@ class App extends React.Component {
 
         <div className="ui container">
           <BrowserRouter>
-            <Tweets username={this.state.username}/>
+            <Tweets key={this.state.username}username={this.state.username}/>
           </BrowserRouter>
         </div>
       </div>

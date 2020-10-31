@@ -1,5 +1,7 @@
 import React from "react";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+const apiURL = "http://localhost:9000/twitterAPI";
+// const apiURL = "https://api.twitter.com/2/tweets/search/recent";
 
 class Tweets extends React.Component{
     constructor(props) {
@@ -8,8 +10,9 @@ class Tweets extends React.Component{
     }
 
     callAPI() {
-        fetch("http://localhost:9000/testAPI")
-            .then(res => res.text())
+        fetch(apiURL)
+            // .then(console.log("connected"))
+            .then(res => res.json)
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
@@ -20,7 +23,7 @@ class Tweets extends React.Component{
 
     render() {
         return(
-            <h1>;{this.state.apiResponse}</h1>
+            <h1>{this.state.apiResponse}</h1>
         );
     }
 }
