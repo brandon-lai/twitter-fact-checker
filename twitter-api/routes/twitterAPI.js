@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+const fs = require('fs');
 
 var Twitter = require('twitter');
 
@@ -12,8 +13,17 @@ var client = new Twitter({
     bearer_token: 'AAAAAAAAAAAAAAAAAAAAAELDIwEAAAAAkXW1fFhAHsWxt1OPe20xutQy64k%3D2Drzxe0eKdiTQoUMz4Jfka3aakRKiRBFouMK1JkNGvbHtZ7gUN'
 });
 
-client.get("search/tweets", {q: 'node.js'}, function(error, tweets, response) {
-    console.log(tweets);
+// const query = "from:realDonaldTrump -is:retweet is:verified -has:media -has:images -has:videos";
+
+client.get("search/tweets", {q: "from:realDonaldTrump -is:retweet -has:videos -has:images -has:media"}, function(error, tweets, response) {
+    const jsonString = JSON.stringify(tweets);
+    fs.writeFile('../recentTweetData.json', jsonString, err => {
+        if (err) {
+            console.log('Error writing to file', err);
+        } else {
+            console.log('Successfully wrote to file');
+        }
+    })
 });
 
 module.exports = router;
