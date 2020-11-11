@@ -1,4 +1,5 @@
 # Fact Checker for Tweets from Twitter
+This is a website that retrieves the most recent tweets from a user's profile and uses google fact checking tool API to analyze and assign the user a truth score. 
 
 ## Available Scripts
 
